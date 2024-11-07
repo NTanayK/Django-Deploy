@@ -56,6 +56,11 @@ git init
 
 git add .
 git commit -am "first commit"
+=> If making any changes again then use 
+git add .
+git commit -am "changes made"
+
+
 
 => Create a repo in the github
 

@@ -1,0 +1,17 @@
+CREATE DATABASE portal_db;
+CREATE USER portal_user WITH PASSWORD 'ABRAKADABRA';
+ALTER ROLE portal_user SET client_encoding TO 'utf8';
+ALTER ROLE portal_user SET default_transaction_isolation TO 'read committed';
+ALTER ROLE portal_user SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE portal_db TO portal_user;
+
+
+
+
+asgiref==3.7.2
+backports.zoneinfo==0.2.1
+Django==3.2.25
+psycopg2==2.9.9
+python-dotenv==0.21.1
+sqlparse==0.4.4
+whitenoise==6.5.0

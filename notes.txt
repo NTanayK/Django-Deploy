@@ -1,0 +1,61 @@
+pip install psycopg2
+pip install python-dotenv
+pip install whitenoise
+
+step2:
+======
+deployment.py
+
+
+step3:
+======
+adding settings in wsgi.py for azzure deployment and for local host
+settings_module = 'PortalProject.deployment' if 'WEBSITE_HOSTNAME' in os.environ else 'PortalProject.settings'
+
+
+step4:
+======
+requirements.txt
+
+all the dependencies that we used in the project ==> Azure needs to know this so we use this file to 
+let azzure know about all the installed dependencies
+
+pip freeze > requirements.txt
+=> create requirements.txt
+
+===> Venv:
+==========
+python -m venv venv
+
+.\venv\Scripts\activate
+
+
+
+
+step5:
+======
+.production
+
+
+step6:
+======
+.gitignore
+
+
+
+vid2:
+=====
+
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+git config --global push.default matching
+git config --global alias.co checkout
+
+git init
+
+git add .
+git commit -am "first commit"
+
+=> Create a repo in the github
+

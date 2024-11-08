@@ -142,4 +142,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tanaykumar251@gmail.com'
-EMAIL_HOST_PASSWORD = 'gokt qklu geyn ohod'
+EMAIL_HOST_PASSWORD = ''

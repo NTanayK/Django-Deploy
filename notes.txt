@@ -62,5 +62,43 @@ git commit -am "changes made"
 
 
 
-=> Create a repo in the github
+=> Create a repo in the github:
+==============================
 
+
+git remote add origin https://github.com/NTanayK/Django-Deploy.git
+git branch -M main
+git push -u origin main
+
+
+If changes made after adding the project to git:
+================================================
+git add .
+git commit -am "changes made"
+git push 
+
+
+vid3:
+=====
+Need Azure Now
+
+
+s1 => Resource-group
+    Create => select the subscription and all the other Resource Groups
+    Region => Select the region that is closest to use
+    end => create
+
+
+s2 => search: App Services
+    => Create --> Web App + Database
+    select the resource group that we just now created 
+    Name: url that finds the app => LVPEIWorkshop
+    select Python 3.7.0
+    No - No 
+    Plan as per requirements
+    --> Review + Create
+
+
+s3 => 
+
+    

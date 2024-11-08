@@ -30,6 +30,12 @@ python -m venv venv
 .\venv\Scripts\activate
 
 
+for passwords and stuff:
+========================
+created .env file in the project's root directory
+
+CHATGPT LINK: https://chatgpt.com/share/672d82ad-0498-8005-b670-71e727c2209d
+
 
 
 step5:

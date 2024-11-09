@@ -7,11 +7,13 @@ GRANT ALL PRIVILEGES ON DATABASE portal_db TO portal_user;
 
 
 
-
 asgiref==3.7.2
 backports.zoneinfo==0.2.1
+bootstrap4==0.1.0
 Django==3.2.25
+django-crispy-forms==1.14.0
 psycopg2==2.9.9
 python-dotenv==0.21.1
 sqlparse==0.4.4
+tzdata==2022.1
 whitenoise==6.5.0

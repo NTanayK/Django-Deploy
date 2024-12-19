@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from dotenv import load_dotenv
 from pathlib import Path
 import os
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'PortalProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'PortalProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portal_db',             
-        'USER': 'portal_user',            
-        'PASSWORD': 'ABRAKADABRA',      
-        'HOST': 'localhost',              
-        'PORT': '5432',                   
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -130,7 +126,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    # os.path.join(BASE_DIR, 'static')
+    BASE_DIR / "static",
 ]
 
 # Default primary key field type
@@ -138,8 +135,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -150,11 +145,27 @@ SMTP_USERNAME = os.getenv('SMTP_USERNAME')
 SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
 
 
-
 # Email configuration
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.gmail.com'  # Updated to match Brevo's SMTP host
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = 'satyamkumarjha9949@gmail.com'
+EMAIL_HOST_PASSWORD = 'eqfo rast zfzy vvhq'
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.lvpei.org'  # Replace with your SMTP server
+# EMAIL_PORT = 587  # Use 587 for TLS or 465 for SSL
+# EMAIL_USE_TLS = True  # Set True for TLS; use EMAIL_USE_SSL = True for SSL
+# EMAIL_HOST_USER = 'biostatistics@lvpei.org'  # Your email address
+# EMAIL_HOST_PASSWORD = 'init/2024'  # Your email account password
+# DEFAULT_FROM_EMAIL = 'biostatistics@lvpei.org'

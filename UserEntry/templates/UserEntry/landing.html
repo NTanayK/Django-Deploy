@@ -16,117 +16,131 @@
 
 <body>
     <div class="container-fluid">
-        <!-- Image Row -->
         <div class="row" style="min-height: 40vh;">
             <!-- Left half with image -->
             <div class="col-md-6 col-12 p-0">
-                <img src="{% static 'images/g48.jpg' %}" alt="Workshop Image" class="img-fluid w-100 h-100">
+                <img src="{% static 'images/g48.jpg' %}" alt="Image 1" class="img-fluid w-100 h-100">
             </div>
             <!-- Right half with image -->
-            <div class="col-md-6 col-12 d-flex flex-column align-items-center justify-content-center text-white"
-                style="background-color: #03091D;">
-                <img src="{% static 'images/new.svg' %}" alt="Logo" class="img-fluid">
+            <div class="col-md-6 col-12 d-flex flex-column align-items-center justify-content-center text-white position-relative"
+                style="background-color: #03091D">
+                <img src="{% static 'images/new.svg' %}" alt="Image Not Found" class="img-fluid">
             </div>
         </div>
 
-        <!-- Information Row -->
-        <div class="row py-3" style="background-color:#B6C4E0;">
-            <div class="col-md-6 text-center text-md-left">
-                <strong><u>Module - I:</u></strong> Monday, 18 November 2024, 3:30 pm - 5:30 pm<br>
-                <strong><u>Module - II:</u></strong> Tuesday, 26 November 2024, 3:30 pm - 5:30 pm
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <strong><u>Venue:</u></strong> Class Room-1, Level-1, KAR Campus<br>
-                <strong><u>Course Convenor:</u></strong> Dr. Md Hasnat Ali
-            </div>
-        </div>
 
-        <!-- Workshop Overview and Modules -->
-        <div class="row py-4 ml-2">
-            <!-- Workshop Overview -->
-            <div class="col-md-4 mb-4">
-                <h5><b>Workshop Overview:</b></h5>
-                <p>Goal: This workshop equips participants with foundational skills in R programming, data manipulation, and statistical analysis, setting them up for data science applications.</p>
 
-                <h6><b>1. Introduction to Data Science and R</b></h6>
-                <ul>
-                    <li>Overview of Data Science: Essentials of data, analysis, and the role of R.</li>
-                    <li>Getting Started with R: Installing R and RStudio, basic commands.</li>
-                    <li>Hands-On: Basic commands and variable assignments.</li>
-                </ul>
 
-                <h6><b>2. Basics of R Programming</b></h6>
-                <ul>
-                    <li>Data Types & Structures: Vectors, matrices, lists, and data frames.</li>
-                    <li>Operations & Functions: Arithmetic, logic, and custom functions.</li>
-                    <li>Data Import/Export: Load from CSV, save data.</li>
-                    <li>Hands-On: Subsetting and data manipulation.</li>
-                </ul>
-            </div>
 
-            <!-- Modules 3 to 5 -->
-            <div class="col-md-4 mb-4">
-                <h6><b>3. Data Manipulation & Visualization</b></h6>
-                <ul>
-                    <li>Data Wrangling with dplyr: Filter, mutate, summarize, group operations.</li>
-                    <li>Visualization with ggplot2: Build histograms, scatter plots.</li>
-                    <li>Hands-On: Clean data with dplyr, visualize distributions.</li>
-                </ul>
 
-                <h6><b>4. Introduction to Descriptive Statistics</b></h6>
-                <ul>
-                    <li>Descriptive Measures: Mean, median, variance, data distribution.</li>
-                    <li>Exploratory Data Analysis (EDA): Use summary() and visualize distributions.</li>
-                    <li>Hands-On: Calculate and interpret basic statistics.</li>
-                </ul>
-
-                <h6><b>5. Introduction to Inferential Statistics</b></h6>
-                <ul>
-                    <li>Hypothesis Testing: Null vs. alternative hypotheses, p-values, significance.</li>
-                    <li>Common Tests: T-tests, chi-square tests.</li>
-                    <li>Hands-On: Run tests in R, interpret outputs.</li>
-                </ul>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="col-md-12 text-center">
-                    <img src="{% static 'images/new.png' %}" alt="Additional Image" class="img-fluid my-3">
+        <div class="row">
+            <!-- Left side block -->
+            <div class="col-md-12 mb-4 d-flex justify-content-between align-items-center"
+                style="background-color:#B6C4E0; padding: 10px;">
+                <div class="ml-lg-5 w-50">
+                    <strong><u>Module - I:</u> Tuesday, 14 January 2025, 3:00 pm - 5:00 pm<br></strong>
+                    <strong><u>Module - II:</u> Thursday, 24 January 2025, 3:00 pm - 5:00 pm</strong>
+                </div>
+                <div class="text-right mr-lg-5 w-50">
+                    <strong><u>Venue:</u></strong>Class Room-1, Level-1, KAR Campus<br>
+                    <strong><u>Course convenor:</u></strong> Dr Md Hasnat Ali
                 </div>
             </div>
-            
-        </div>
+            <div class="col-md-6 mb-4 ml-5" style="max-width: 494px;">
+                <div class="mb-3">
+                    <h5 class="fw-bold"><b>Workshop Overview:</b></h5>
+                    <p>Goal: This workshop equips participants with foundational skills in R programming, data
+                        manipulation, and statistical analysis, setting them up for data science applications.</p>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold"><b>1. Introduction to Data Science and R</b></h6>
+                    <ul class="list-unstyled">
+                        <li>• Overview of Data Science: Explore the essentials—data, analysis, and insights—and the role
+                            of R in data science.</li>
+                        <li>• Getting Started with R: Install R and RStudio, and learn the interface (console, script
+                            editor, plots).</li>
+                        <li>• Hands-On: Basic commands and variable assignments.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="fw-bold"><b>2. Basics of R Programming</b></h6>
+                    <ul class="list-unstyled">
+                        <li>• Data Types & Structures: Vectors, matrices, lists, and data frames.</li>
+                        <li>• Operations & Functions: Arithmetic, logic, and creating custom functions.</li>
+                        <li>• Data Import/Export: Load from CSV and save data.</li>
+                        <li>• Hands-On: Work with small datasets—subsetting and data manipulation.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <!-- Workshop Overview Conclusion -->
-        <div class="overview"> 
-            <ul>
-                <li><b>Workshop Overview: Goal: This workshop equips participants with foundational skills in R
-                        programming, data manipulation, and statistical analysis, setting them up for <br> data
-                        science
-                        applications</b></li>
-            </ul>
-        </div>
+            <!-- Right side block -->
+            <div class="col-md-6 mb-4 ml-4" style="max-width: 454px;">
+                <div class="mb-3">
+                    <h6 class="fw-bold"><b>3. Data Manipulation & Visualization</b></h6>
+                    <ul class="list-unstyled">
+                        <li>• Data Wrangling with dplyr: Filter, mutate, summarize, and group operations.</li>
+                        <li>• Visualization with ggplot2: Build histograms, scatter plots, and customize visuals.</li>
+                        <li>• Hands-On: Clean data with dplyr and visualize distributions.</li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <h6 class="fw-bold"><b>4. Introduction to Descriptive Statistics</b></h6>
+                    <ul class="list-unstyled">
+                        <li>• Descriptive Measures: Mean, median, variance, and data distribution.</li>
+                        <li>• Exploratory Data Analysis (EDA): Use summary() and visualize distributions.</li>
+                        <li>• Hands-On: Calculate and interpret basic statistics.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="fw-bold"><b>5. Introduction to Inferential Statistics</b></h6>
+                    <ul class="list-unstyled">
+                        <li>• Hypothesis Testing: Null vs. alternative hypotheses, p-values, significance.</li>
+                        <li>• Common Tests: T-tests and chi-square tests.</li>
+                        <li>• Hands-On: Run tests in R and interpret outputs.</li>
+                    </ul>
+                </div>
 
-        <!-- Registration Button -->
-        <div class="text-center my-4">
+            </div>
+            <div class="col-md-6 mb-4 ml-5" style="max-width: 385px;">
+                <!-- Right Image Block -->
+                <div class="right-block d-flex align-items-center justify-content-center" style="height: 100%;">
+                    <!-- Centered Image -->
+                    <img src="{% static 'images/new.png' %}" alt="Image 1" class="img-fluid">
+                </div>
+            </div>
+            <!-- This is the last OverView Line -->
+            <div class="overview">
+                <ul>
+                    <li><b>Workshop Overview:Goal: This workshop equips participants with foundational skills in R
+                            programming, data manipulation, and statistical analysis, setting them up for <br> data
+                            science
+                            applications</b></li>
+                </ul>
+            </div>
+        </div>
+        <div class="reg">
             <form action="/register/" method="post">
                 {% csrf_token %}
-                <h4>Click Here To Register <button type="submit" class="btn btn-warning">Register Here</button></h4>
-                
+                <p class="text-center">
+                <h3 class="text-center">Click Here To Register <button type="submit" class="btn btn-warning">Register
+                        Here</button></h3>
+                </p>
             </form>
         </div>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

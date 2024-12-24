@@ -53,7 +53,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# ROOT_URLCONF = 'PortalProject.urls'
+ROOT_URLCONF = 'PortalProject.urls'
+
 
 TEMPLATES = [
     {
@@ -145,8 +146,8 @@ load_dotenv()
 
 
 # Retrieve SMTP credentials from environment variables
-SMTP_USERNAME = os.getenv('SMTP_USERNAME')
-SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
+# SMTP_USERNAME = os.getenv('SMTP_USERNAME')
+# SMTP_PASSWORD = os.getenv('SMTP_PASSWORD')
 
 
 # Email configuration

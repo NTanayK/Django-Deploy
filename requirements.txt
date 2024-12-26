@@ -20,6 +20,7 @@ pipreqs==0.4.13
 psycopg==3.2.3
 psycopg2-binary==2.9.10
 pycryptodome==3.21.0
+whitenoise==6.5.0
 PyJWT==2.10.1
 PyMySQL==1.1.1
 python-dateutil==2.9.0.post0

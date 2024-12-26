@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -178,3 +179,10 @@ EMAIL_HOST_PASSWORD = 'eqfo rast zfzy vvhq'
 # EMAIL_HOST_USER = 'biostatistics@lvpei.org'  # Your email address
 # EMAIL_HOST_PASSWORD = 'init/2024'  # Your email account password
 # DEFAULT_FROM_EMAIL = 'biostatistics@lvpei.org'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://registrationform-cafjecgvahbzebd8.southindia-01.azurewebsites.net/',  # Replace with your Azure app domain
+]
+
+CSRF_COOKIE_SECURE = True 

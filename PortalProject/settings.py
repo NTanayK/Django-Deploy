@@ -30,7 +30,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['.azurewebsites']
+ALLOWED_HOSTS = ['.azurewebsites','*']
 
 
 # Application definition

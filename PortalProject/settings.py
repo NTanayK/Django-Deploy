@@ -30,7 +30,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -184,6 +184,9 @@ EMAIL_HOST_PASSWORD = 'eqfo rast zfzy vvhq'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://registrationform-cafjecgvahbzebd8.southindia-01.azurewebsites.net'
+    'https://registrationform-cafjecgvahbzebd8.southindia-01.azurewebsites.net/',  # Replace with your Azure app domain
 ]
+
 CSRF_COOKIE_SECURE = True 
+
+ALLOWED_HOSTS = ['*']

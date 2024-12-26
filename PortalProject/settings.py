@@ -183,8 +183,8 @@ EMAIL_HOST_PASSWORD = 'eqfo rast zfzy vvhq'
 # DEFAULT_FROM_EMAIL = 'biostatistics@lvpei.org'
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://registrationform-cafjecgvahbzebd8.southindia-01.azurewebsites.net/',  # Replace with your Azure app domain
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://registrationform-cafjecgvahbzebd8.southindia-01.azurewebsites.net/',  # Replace with your Azure app domain
+]
 
-# CSRF_COOKIE_SECURE = True 
+CSRF_COOKIE_SECURE = True 

@@ -19,12 +19,14 @@
         <div class="row" style="min-height: 40vh;">
             <!-- Left half with image -->
             <div class="col-md-6 col-12 p-0">
-                <img src="{% static 'images/g48.jpg' %}" alt="Image 1" class="img-fluid w-100 h-100">
+                {% comment %} <img src="{% static 'images/g48.jpg' %}" alt="Image 1" class="img-fluid w-100 h-100"> {% endcomment %}
+                <img src="/static/images/g48.jpg" alt="Image 12" class="img-fluid">
             </div>
             <!-- Right half with image -->
             <div class="col-md-6 col-12 d-flex flex-column align-items-center justify-content-center text-white position-relative"
                 style="background-color: #03091D">
-                <img src="{% static 'images/new.svg' %}" alt="Image Not Found" class="img-fluid">
+                {% comment %} <img src="{% static 'images/new.svg' %}" alt="Image Not Found" class="img-fluid"> {% endcomment %}
+                <img src="/static/images/new.svg" alt="Image Not Found" class="img-fluid">
             </div>
         </div>
 
@@ -105,7 +107,7 @@
                 <!-- Right Image Block -->
                 <div class="right-block d-flex align-items-center justify-content-center" style="height: 100%;">
                     <!-- Centered Image -->
-                    <img src="{% static 'images/new.png' %}" alt="Image 1" class="img-fluid">
+                   <img src="/static/images/new.png" alt="Image 1" class="img-fluid">
                 </div>
             </div>
             <!-- This is the last OverView Line -->

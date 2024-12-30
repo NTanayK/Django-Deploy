@@ -42,7 +42,7 @@ def register(request):
                                         <h4 style="color: #333; margin-bottom: 5px;">Timings:</h4>
                                         <p>
                                             <strong><u>Module - I:</u></strong> Tuesday, 14 January 2025, 3:00 pm - 5:00 pm<br>
-                                            <strong><u>Module - II:</u></strong> Thursday, 24 January 2025, 3:00 pm - 5:00 pm
+                                            <strong><u>Module - II:</u></strong> Friday, 24 January 2025, 3:00 pm - 5:00 pm
                                         </p>
 
                                         <h3 style="color: #555;">Workshop Overview:</h3>

@@ -15,8 +15,10 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
 import pymysql
 pymysql.install_as_MySQLdb()
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,6 +36,9 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
 
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 
@@ -102,18 +107,8 @@ WSGI_APPLICATION = 'PortalProject.wsgi.application'
 #     }
 # }
 # Check if DATABASE_URL is available
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-# Default database configuration
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URL) if DATABASE_URL else {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'datascience_db'),
-        'USER': os.getenv('DB_USER', 'datascience_db_user'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'bCd8qJAnS4nsU2GnawaC1SGV0k0Mks6X'),
-        'HOST': os.getenv('DB_HOST', 'dpg-cug4sq1opnds73bhoc5g-a.oregon-postgres.render.com'),
-        'PORT': os.getenv('DB_PORT', '5432'),
-    }
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
 
 # Ensure psycopg2 is installed

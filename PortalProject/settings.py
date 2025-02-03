@@ -107,15 +107,14 @@ WSGI_APPLICATION = 'PortalProject.wsgi.application'
 #     }
 # }
 # Check if DATABASE_URL is available
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
-}
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-# Ensure psycopg2 is installed
-try:
-    import psycopg2
-except ImportError:
-    raise ImportError("psycopg2 is required for PostgreSQL database connection.")
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(default=DATABASE_URL)
+    }
+else:
+    raise Exception("DATABASE_URL is not set in the environment variables")
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

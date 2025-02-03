@@ -101,25 +101,26 @@ WSGI_APPLICATION = 'PortalProject.wsgi.application'
 #         'PORT': '3306',                     # Default MySQL port
 #     }
 # }
-
+# Check if DATABASE_URL is available
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-if DATABASE_URL:
-    DATABASES = {
-        'default': dj_database_url.config(default=DATABASE_URL)
+# Default database configuration
+DATABASES = {
+    'default': dj_database_url.config(default=DATABASE_URL) if DATABASE_URL else {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'datascience_db'),
+        'USER': os.getenv('DB_USER', 'datascience_db_user'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'bCd8qJAnS4nsU2GnawaC1SGV0k0Mks6X'),
+        'HOST': os.getenv('DB_HOST', 'dpg-cug4sq1opnds73bhoc5g-a.oregon-postgres.render.com'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'datascience_db',
-            'USER': 'datascience_db_user',
-            'PASSWORD': 'bCd8qJAnS4nsU2GnawaC1SGV0k0Mks6X',
-            'HOST': 'dpg-cug4sq1opnds73bhoc5g-a.oregon-postgres.render.com',
-            'PORT': '5432',
-        }
-    }
+}
 
+# Ensure psycopg2 is installed
+try:
+    import psycopg2
+except ImportError:
+    raise ImportError("psycopg2 is required for PostgreSQL database connection.")
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

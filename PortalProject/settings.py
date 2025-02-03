@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from dotenv import load_dotenv
 from pathlib import Path
 import os
+import dj_database_url
+
+import pymysql
+pymysql.install_as_MySQLdb()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -87,17 +91,34 @@ WSGI_APPLICATION = 'PortalProject.wsgi.application'
 
 # Added POSTGRESQL
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TEST',               # Database name you created
-        'USER': 'root',              # MySQL username
-        'PASSWORD': 'TANAYKUMAR',          # MySQL password
-        'HOST': 'localhost',                # Typically 'localhost'
-        'PORT': '3306',                     # Default MySQL port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'TEST',               # Database name you created
+#         'USER': 'root',              # MySQL username
+#         'PASSWORD': 'TANAYKUMAR',          # MySQL password
+#         'HOST': 'localhost',                # Typically 'localhost'
+#         'PORT': '3306',                     # Default MySQL port
+#     }
+# }
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(default=DATABASE_URL)
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'datascience_db',
+            'USER': 'datascience_db_user',
+            'PASSWORD': 'bCd8qJAnS4nsU2GnawaC1SGV0k0Mks6X',
+            'HOST': 'dpg-cug4sq1opnds73bhoc5g-a.oregon-postgres.render.com',
+            'PORT': '5432',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
